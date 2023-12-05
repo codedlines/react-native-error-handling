@@ -97,7 +97,7 @@ function App(): JSX.Element {
           <LearnMoreLinks />
           <Button
             title="Sentry error"
-            onPress={() => Sentry.captureException(new Error('Test error'))}
+            onPress={() => Sentry.captureException(new Error('Trigger Error'))}
           />
         </View>
       </ScrollView>

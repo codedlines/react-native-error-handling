@@ -19,7 +19,7 @@ export const fetchApiData = async (endPoint: string) => {
 
 export const getUsers = async (): Promise<string | null> => {
   try {
-    return fetchApiData('users');
+    return fetchApiData('/users');
   } catch (error) {
     Sentry.captureException(new Error(error.message));
   }
