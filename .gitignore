@@ -36,3 +36,13 @@ node_modules
 android/app/build
 android/.gradle
 ios/build
+# react-native-ultimate-config
+rnuc.xcconfig
+# OSX
+#
+.DS_Store
+# Dot env
+.env
+# sentry properties
+ios/sentry.properties
+android/sentry.properties
