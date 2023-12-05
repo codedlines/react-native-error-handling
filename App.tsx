@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -27,6 +27,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import * as Sentry from '@sentry/react-native';
 import {initSentry} from './src/config/sentry';
+import SplashScreen from 'react-native-splash-screen';
 
 initSentry();
 
@@ -66,6 +67,10 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
